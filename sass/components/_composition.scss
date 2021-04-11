@@ -1,0 +1,53 @@
+.first-column {
+	margin: 0 2rem;
+}
+
+.second-column {
+	background-color: red;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 2rem;
+}
+
+/* .composition ***NOTE THAT OVERLAPPING FLEX ITEMS DID NOT WORK: COME BACK TO THIS LATER AND USE GRID LAYOUT. not hover scale also did not work {
+	&_photo {
+		width: 10%;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+		border-radius: 2px;
+	}
+ */
+/* &p1 {
+	}
+	&p2 {
+		margin-left: -10px;
+	}
+	&p3 {
+		display: flex;
+		margin-bottom: -500px;
+	} 
+}*/
+.composition_photo {
+	width: 30%;
+	height: 50%;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+	border-radius: 2px;
+	transition: all 0.2s;
+	outline-offset: 2rem;
+	&:hover {
+		outline: 1.5rem solid $color-primary-dark;
+		transform: scale(1.05);
+		box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+	}
+}
+
+composition_p1 {
+	margin-left: -100px;
+}
+
+composition_p2 {
+	margin-left: -100px;
+}
+
+composition_p3 {
+	margin-left: -100px;
+}
