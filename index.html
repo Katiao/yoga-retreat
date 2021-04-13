@@ -73,9 +73,30 @@
 					</div>
 
 					<div class="second-column">
-							<img src="img/Home_img_1.jpg" alt="Photo of Retreat 1" class="composition_photo composition_p1">
+						<!-- allow browser to choose the best image for the current viewport & pixel density.
+						browser will take care of both resolution and density switching TO DO check sizes again -->
+
+						<img srcset="img/Home_img_1-small.jpg 300w, img/Home_img_1 640w" 
+							sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+							alt='Photo 1'
+							class="composition_photo composition_p1"
+							src="img/Home_img_1.jpg">
+
+							<img srcset="img/Home_img_2-small.jpg 300w, img/Home_img_2 640w" 
+							sizes="(max-width: 56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+							alt='Photo 2'
+							class="composition_photo composition_p2"
+							src="img/Home_img_2.jpg">	
+
+							<img srcset="img/Home_img_3-small.jpg 300w, img/Home_img_3 640w" 
+							sizes="(max-width: 56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+							alt='Photo 3'
+							class="composition_photo composition_p3"
+							src="img/Home_img_3.jpg">	
+
+							<!-- <img src="img/Home_img_1.jpg" alt="Photo of Retreat 1" class="composition_photo composition_p1">
 							<img src="img/Home_img_2.jpg" alt="Photo of Retreat 2" class="composition_photo composition_p2">
-							<img src="img/Home_img_3.jpg" alt="Photo of Retreat 3" class="composition_photo composition_p3">
+							<img src="img/Home_img_3.jpg" alt="Photo of Retreat 3" class="composition_photo composition_p3"> -->
 					</div>
 				</div>
 			</section>
@@ -335,7 +356,13 @@
 		</main>
 
 		<footer class="footer">
-				<img src="img/logo.png" alt="Full logo" class="footer-logo">
+			<!-- density descriptor for images 
+			+ art direction happening at the breakpoint of the phone-->
+				<picture class="footer-logo">
+					<source srcset="img/logo-small.png" media="(max-width: 37.5em)">
+					<img srcset="img/logo-small.png 1x, img/logo.png 2x" alt="Full logo" src="img/logo.png">
+				</picture>
+				
 				<div class="footer-box">
 						<ul class="footer-list">
 								<li class="footer-item"><a href="#" class="footer-link">Company</a></li>

@@ -5,6 +5,9 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	@include respond(tab-port) {
+		padding: 20rem 0;
+	}
 }
 .about-content-container {
 	display: flex;
@@ -26,6 +29,10 @@
 	background-size: cover;
 	-webkit-clip-path: polygon(0 25vh, 100% 0, 100% 75vh, 0 100%);
 	clip-path: polygon(0 25vh, 100% 0, 100% 75vh, 0 100%);
+
+	@include respond(tab-port) {
+		padding: 10rem 0;
+	}
 }
 
 .section-retreats {
@@ -35,12 +42,22 @@
 	flex-direction: column;
 	align-items: center;
 	margin-top: -20rem;
+
+	@include respond(tab-port) {
+		padding: 20rem 0 10rem 0;
+	}
 }
 .retreats {
 	display: grid;
 	grid-template-columns: auto 30rem 30rem 30rem auto;
 	grid-template-rows: 55rem;
 	column-gap: 3rem;
+	@include respond(tab-port) {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 55rem auto 55rem auto 55rem auto;
+		row-gap: 4rem;
+	}
 }
 
 .section-stories {
@@ -75,9 +92,27 @@
 	background-size: cover;
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
-	height: 50rem;
 	width: 80%;
 	display: flex;
+
+	@include respond(tab-land) {
+		background-image: linear-gradient(
+				105deg,
+				rgba($color-white, 0.9) 0%,
+				rgba($color-white, 0.9) 65%,
+				transparent 65%
+			),
+			url(../img/lake-2.jpg);
+	}
+
+	@include respond(tab-port) {
+		background-image: linear-gradient(
+				to right,
+				rgba($color-white, 0.9) 0%,
+				rgba($color-white, 0.9) 100%
+			),
+			url(../img/lake-2.jpg);
+	}
 
 	.form {
 		width: 50%;
@@ -85,6 +120,12 @@
 
 		h2 {
 			font-size: 3rem;
+		}
+		@include respond(tab-land) {
+			width: 65%;
+		}
+		@include respond(tab-land) {
+			width: 100%;
 		}
 	}
 }

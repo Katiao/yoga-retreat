@@ -1,6 +1,4 @@
 .story {
-	/* 	display: flex;
-	justify-content: space-between; */
 	width: 75%;
 	margin: 0 auto 8rem auto;
 	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
@@ -10,6 +8,16 @@
 	padding-left: 9rem;
 	font-size: $default-font-size;
 	transform: skew(-12deg);
+
+	@include respond(tab-port) {
+		width: 100%;
+		padding: 4rem;
+		padding-left: 7rem;
+	}
+
+	@include respond(phone) {
+		transform: skewX(0);
+	}
 
 	&-shape {
 		width: 15rem;
@@ -21,6 +29,10 @@
 		//best way to move an element that is floated is to use a transform
 		transform: translateX(-3rem) skew(12deg);
 		position: relative;
+
+		@include respond(phone) {
+			transform: translateX(-3rem) skewX(0);
+		}
 	}
 
 	&-img {
@@ -33,6 +45,10 @@
 
 	&-text {
 		transform: skew(12deg);
+
+		@include respond(phone) {
+			transform: skewX(0);
+		}
 	}
 
 	&-caption {
