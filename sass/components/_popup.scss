@@ -1,0 +1,91 @@
+.popup {
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba($color-black, 0.8);
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	//display none will not work because we need to animate it. We therefore use the below, the text is still there but not visible.
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+
+	&-content {
+		width: 75%;
+		height: 75%;
+		background-color: $color-white;
+		box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+		border-radius: 3px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		//removed overlap of image
+		overflow: hidden;
+	}
+
+	&-left {
+		width: 33.3333333%;
+		background-image: url('../img/Yoga.jpg');
+		background-size: cover;
+		height: 100%;
+	}
+
+	&-right {
+		width: 66.66666667%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: relative;
+		align-items: center;
+		padding: 0 2rem 0 2rem;
+
+		& > * {
+			padding: 2rem 4rem 2rem 4rem;
+		}
+
+		& a {
+			outline: none;
+			text-decoration: none;
+		}
+	}
+	&-btn {
+		display: inline-block;
+		padding-top: 5rem;
+	}
+
+	&-text {
+		font-size: 1.4rem;
+		margin-bottom: 4rem;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+	}
+
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&-close {
+		&:link,
+		&:visited {
+			color: $color-grey-dark;
+			position: absolute;
+			top: -6rem;
+			right: 0;
+			font-size: 3rem;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.2s;
+			line-height: 1;
+		}
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}

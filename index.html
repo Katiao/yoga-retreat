@@ -15,6 +15,27 @@
 		<title>Yoga Retreat</title>
 	</head>
 	<body>
+
+			<div class="navigation">
+				<input type="checkbox" class="navigation-checkbox" id="navi-toggle">
+				<label for="navi-toggle" class="navigation-button">
+					<span class="navigation-icon">&nbsp;</span>
+				</label>
+
+				<div class="navigation-background">&nbsp;</div>
+
+				<nav class="navigation-nav">
+					<ul class="navigation-list">
+						<li class="navigation-item"><a href="#" class="navigation-link"><span>01</span> About Yoga Retreat</a></li>
+						<li class="navigation-item"><a href="#" class="navigation-link"><span>02</span> What's included</a></li>
+						<li class="navigation-item"><a href="#" class="navigation-link"><span>03</span> Popular Retreats</a></li>
+						<li class="navigation-item"><a href="#" class="navigation-link"><span>04</span> Stories</a></li>
+						<li class="navigation-item"><a href="popup" class="navigation-link"><span>05</span> Book Now</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
 		<header class="header">
 			<div class="header__logo-box">
 				<img src="img/logo.png" alt="Logo" class="header__logo" />
@@ -27,7 +48,7 @@
 					>
 				</h1>
 
-				<a href="#" class="btn btn--white btn--animated"
+				<a href="#section-retreats" class="btn btn--white btn--animated"
 					>Check out our retreats</a
 			</div>
 		</header>
@@ -89,11 +110,11 @@
 				</div>
 			</section>
 
-			<section class="section-tours">
+			<section class="section-retreats" id="section-retreats">
 				<h2 class="heading-secondary u-margin-bottom-big">
 					Most popular retreats
 				</h2>
-				<div class="tours u-margin-bottom-big">
+				<div class="retreats u-margin-bottom-big">
 					<div class="card card-1">
 						<div class="card-side card-side-front">
 							<div class="card-picture card-picture-1">
@@ -127,7 +148,7 @@
 									€500
 								</p>
 							</div>
-								<a href="#" class="btn btn--white">Book now!</a>
+								<a href="#popup" class="btn btn--white">Book now!</a>
 							
 						</div>
 					</div>
@@ -163,7 +184,7 @@
 									€800
 								</p>
 							</div>
-								<a href="#" class="btn btn--white">Book now!</a>
+								<a href="#popup" class="btn btn--white">Book now!</a>
 
 						</div>
 					</div>
@@ -199,7 +220,7 @@
 									€700
 								</p>
 							</div>
-								<a href="#" class="btn btn--white">Book now!</a>
+								<a href="#popup" class="btn btn--white">Book now!</a>
 						</div>
 					</div>	
 
@@ -328,5 +349,23 @@
 					</p>
 				</div>		
 		</footer>
+
+		<div class="popup" id="popup">
+			<div class="popup-content">
+				<div class="popup-left">
+					&nbsp;
+				</div>
+				<div class="popup-right">
+					<a href="#section-retreats" class="popup-close">&times;</a>
+					<h2 class="heading-secondary">Start booking now</h2>
+					<h3 class="heading-tertiary">More information &ndash; <a href="#">Download</a>  our booklet for more details</h3>
+					<p class="popup-text">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad itaque, ratione cumque veritatis quasi repellendus. Possimus atque debitis maiores cum optio aliquid molestiae officia, et beatae inventore voluptatibus nemo dignissimos. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad itaque, ratione cumque veritatis quasi repellendus. Possimus atque debitis maiores cum optio aliquid molestiae officia, et beatae inventore voluptatibus nemo dignissimos.	
+
+					</p>
+					<a href="#" class="btn btn--green popup-btn">book now</a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
