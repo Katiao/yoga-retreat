@@ -11,8 +11,10 @@
 }
 .about-content-container {
 	display: flex;
-	/* justify-content: center;
-	align-items: stretch; */
+
+	@include respond(tab-port) {
+		flex-direction: column;
+	}
 }
 
 .section-features {
@@ -25,13 +27,16 @@
 			rgba($color-primary-light, 0.8),
 			rgba($color-primary-dark, 0.8)
 		),
-		url(../img/bg-img.jpg);
+		url(../img/Home_img_3.jpg);
 	background-size: cover;
 	-webkit-clip-path: polygon(0 25vh, 100% 0, 100% 75vh, 0 100%);
 	clip-path: polygon(0 25vh, 100% 0, 100% 75vh, 0 100%);
 
 	@include respond(tab-port) {
 		padding: 10rem 0;
+		flex-direction: column;
+		clip-path: none;
+		background-image: none;
 	}
 }
 

@@ -24,11 +24,18 @@
 		height: 15rem;
 		float: left;
 		shape-outside: circle(50% at 50% 50%);
-		-webkit-clip-path: circle(50% at 50% 50%);
-		clip-path: circle(50% at 50% 50%);
+
 		//best way to move an element that is floated is to use a transform
 		transform: translateX(-3rem) skew(12deg);
 		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+
+		@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+			-webkit-clip-path: circle(50% at 50% 50%);
+			clip-path: circle(50% at 50% 50%);
+			border-radius: none;
+		}
 
 		@include respond(phone) {
 			transform: translateX(-3rem) skewX(0);

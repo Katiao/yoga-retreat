@@ -1,5 +1,5 @@
 .header {
-	height: 95vh;
+	height: 85vh;
 	background-image: linear-gradient(
 			to right bottom,
 			rgba($color-primary-light, 0.8),
@@ -8,14 +8,21 @@
 		url(../img/hero-small.jpg);
 	background-size: cover;
 	background-position: top;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 	position: relative;
+
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		height: 95vh;
+	}
 
 	//we can use media queries to target resolutions. If resolution is higher, load higher resolution image.
 	// we add second argument to make sure phones always get smaller image.
 	//apply high resolution image for larger screens:
-	@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+	//three conditions separated by OR (commas), one which is for Safari.
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+		only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+		only screen and (min-width: 125em) {
 		background-image: linear-gradient(
 				to right bottom,
 				rgba($color-primary-light, 0.8),

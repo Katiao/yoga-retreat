@@ -24,6 +24,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		border-radius: 3px;
 		//image is overflowing parent as corners are not rounded so we use overflow hidden in parent element to fix that.
@@ -184,7 +185,8 @@
 		font-weight: 200;
 	}
 
-	@include respond(tab-port) {
+	//card should be displayed with back part visible when screen smaller than 56.25em or when using a device where we cannot hover.
+	@media only screen and (max-width: 56.25em), only screen and (hover: none) {
 		border-radius: 3px;
 		background-color: $color-white;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);

@@ -3,6 +3,13 @@
 		margin-bottom: 2rem;
 	}
 
+	&-group button {
+		margin-top: 1rem;
+		@include respond(tab-port) {
+			margin-top: 4rem;
+		}
+	}
+
 	&-input {
 		font-size: 1.5rem;
 		//input elements don't inherit font family or color.
