@@ -3,51 +3,46 @@
 }
 
 .second-column {
-	background-color: red;
-	display: flex;
-	justify-content: space-between;
-	margin: 0 2rem;
-}
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	align-items: center;
+	transition: all 0.2s;
+	z-index: 10;
 
-/* .composition ***NOTE THAT OVERLAPPING FLEX ITEMS DID NOT WORK: COME BACK TO THIS LATER AND USE GRID LAYOUT. not hover scale also did not work {
-	&_photo {
-		width: 10%;
-		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+	&-photo:hover {
+		transform: scale(1.05) translateY(-0.5rem);
+		box-shadow: 0 2.5rem 4rem rgba(#000, 0.5);
+		outline: 1.5rem solid $color-primary-dark;
+		outline-offset: 2rem;
+		z-index: 20;
+	}
+
+	& .image_1 {
+		width: 100%;
+		grid-column: 1 / 4;
+		grid-row: 1 / 4;
+		box-shadow: 0 2rem 5rem rgba(#000, 0.4);
 		border-radius: 2px;
 	}
- */
-/* &p1 {
-	}
-	&p2 {
-		margin-left: -10px;
-	}
-	&p3 {
-		display: flex;
-		margin-bottom: -500px;
-	} 
-}*/
-.composition_photo {
-	width: 30%;
-	height: 50%;
-	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
-	border-radius: 2px;
-	transition: all 0.2s;
-	outline-offset: 2rem;
-	&:hover {
-		outline: 1.5rem solid $color-primary-dark;
-		transform: scale(1.05);
-		box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-	}
-}
 
-composition_p1 {
-	margin-left: -100px;
-}
+	& .image_2 {
+		width: 100%;
+		grid-column: 3 / 6;
+		grid-row: 2 / 5;
+		box-shadow: 0 2rem 5rem rgba(#000, 0.4);
+		border-radius: 2px;
+	}
 
-composition_p2 {
-	margin-left: -100px;
-}
-
-composition_p3 {
-	margin-left: -100px;
+	& .image_3 {
+		width: 100%;
+		grid-column: 2 / 5;
+		grid-row: 3 / 6;
+		box-shadow: 0 2rem 5rem rgba(#000, 0.4);
+		border-radius: 2px;
+	}
+	//when we hover the 2nd column then select the composition photo which is not hovered.
+	&:hover &-photo:not(:hover) {
+		transform: scale(0.95);
+	}
 }
