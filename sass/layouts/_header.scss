@@ -16,6 +16,12 @@
 		height: 95vh;
 	}
 
+	@include respond(tab-port) {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 90%);
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 90%);
+		height: 95vh;
+	}
+
 	//we can use media queries to target resolutions. If resolution is higher, load higher resolution image.
 	// we add second argument to make sure phones always get smaller image.
 	//apply high resolution image for larger screens:

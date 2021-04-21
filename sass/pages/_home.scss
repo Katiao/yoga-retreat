@@ -29,8 +29,8 @@
 		),
 		url(../img/Home_img_3.jpg);
 	background-size: cover;
-	-webkit-clip-path: polygon(0 25vh, 100% 0, 100% 75vh, 0 100%);
-	clip-path: polygon(0 25vh, 100% 0, 100% 75vh, 0 100%);
+	-webkit-clip-path: polygon(0 10vh, 100% 0, 100% 90vh, 0 100%);
+	clip-path: polygon(0 10vh, 100% 0, 100% 90vh, 0 100%);
 
 	@include respond(tab-port) {
 		padding: 10rem 0;
