@@ -6,15 +6,15 @@
 
 	&-1 {
 		grid-area: c-1;
-		margin-left: 6rem;
+		margin: 0 5vw;
 	}
 	&-2 {
 		grid-area: c-2;
-		margin-left: 6rem;
+		margin: 0 5vw;
 	}
 	&-3 {
 		grid-area: c-3;
-		margin-left: 6rem;
+		margin: 0 5vw;
 	}
 
 	&-side {
@@ -182,11 +182,11 @@
 	}
 	&-price-value {
 		font-size: 6rem;
-		font-weight: 200;
+		font-weight: 400;
 	}
 
-	//card should be displayed with back part visible when screen smaller than 56.25em or when using a device where we cannot hover.
-	@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+	//card should be displayed with back part visible when screen smaller than 1100px or when using a device where we cannot hover.
+	@media only screen and (max-width: 68em), only screen and (hover: none) {
 		border-radius: 3px;
 		background-color: $color-white;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
