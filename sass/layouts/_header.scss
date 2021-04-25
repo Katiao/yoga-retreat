@@ -16,10 +16,10 @@
 		height: 95vh;
 	}
 
-	@include respond(tab-port) {
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 90%);
-		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 90%);
-		height: 95vh;
+	@include respond(tab-land) {
+		-webkit-clip-path: none;
+		clip-path: none;
+		margin-bottom: 10rem;
 	}
 
 	//we can use media queries to target resolutions. If resolution is higher, load higher resolution image.
@@ -38,8 +38,9 @@
 	}
 
 	@include respond(phone) {
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-		clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+		-webkit-clip-path: none;
+		clip-path: none;
+		margin-bottom: 5rem;
 	}
 
 	&__logo-box {
