@@ -51,6 +51,16 @@
 		display: block;
 		transition: all 0.3s;
 	}
+	//here we are hiding the label when the placeholder text is shown.
+	//we are selecting input element when the placeholder is shown and then we select its next sibling (label) which we style when placeholder is shown:
+
+	&-input:placeholder-shown + &-label {
+		opacity: 0;
+		visibility: hidden;
+		//initial state, label is higher up, to create moving down animation:
+		transform: translateY(-4rem);
+	}
+
 	// we use the sibling selector because input and label are at the same level. Here we use the adjacent sibling selector.
 	//when placehoolder is shown (we have written nothing in our input), we want the label to be hidden.
 	//we use opacity because we want to animate the affect.
