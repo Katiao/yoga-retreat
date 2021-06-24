@@ -1,5 +1,5 @@
 # yoga-retreat
-A Yoga Retreat Website built with HTML and CSS/Sass
+A Yoga Retreat Website built with HTML and CSS/Sass.
 Live site: https://inspiring-hodgkin-058e78.netlify.app/
 
 Built a fully responsive website, using Flexbox, CSS Grid and Media
